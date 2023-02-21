@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/lobby.cs" type="Script" id=4]
+
+[node name="lobby" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="criar" type="Button" parent="."]
+margin_left = 237.0
+margin_top = 107.0
+margin_right = 747.0
+margin_bottom = 194.0
+text = "criar"
+
+[node name="entrar" type="Button" parent="."]
+margin_left = 237.0
+margin_top = 231.0
+margin_right = 747.0
+margin_bottom = 300.0
+text = "entrar"
+
+[node name="IP" type="LineEdit" parent="entrar"]
+margin_top = 69.0
+margin_right = 510.0
+margin_bottom = 118.0
+placeholder_text = "coloque ip"
+
+[node name="invalidIP" type="Label" parent="entrar"]
+visible = false
+modulate = Color( 1, 0.0588235, 0.0588235, 1 )
+margin_top = 166.0
+margin_right = 246.0
+margin_bottom = 200.0
+text = "ip invalido "
+align = 1
+valign = 1
+
+[connection signal="pressed" from="criar" to="." method="_on_criar_pressed"]
+[connection signal="pressed" from="entrar" to="." method="_on_entrar_pressed"]
